@@ -32,7 +32,7 @@ class DangKyController {
                 array_push($error,"Mật khẩu không hợp lệ");
             }
 
-            // tạo kết nối DB
+
             $db = new Database();  
             $model = new DangKyModel($db->ketnoi);
 
@@ -55,3 +55,4 @@ class DangKyController {
         include __DIR__ . "/../view/dk_view.php";
     }
 }
+
