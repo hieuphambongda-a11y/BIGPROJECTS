@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&display=swap&subset=vietnamese');
+@import url('https://fonts.googleapis.com/css2?family=Nabla&family=Roboto:ital,wght@0,100..900;1,100..900&family=Stack+Sans+Text:wght@200..700&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Public Sans', sans-serif;
+}
+
+body {
+	background: #f9f9f9;
+	min-height: 100vh;
+	overflow-x: hidden;
+}
+
+#header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 30px 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 100;
+}
+
+.logo {
+	font-size: 3em;
+	font-weight: bold;
+	color: #90EE90;
+	pointer-events: none;
+	text-shadow:
+    -1px -1px 0 #000000,
+     1px -1px 0 #000000,
+    -1px  1px 0 #000000,
+     1px  1px 0 #000000;
+}
+
+.navigation {
+	padding: 10px;
+	backdrop-filter: blur(30px);
+	box shadow: 0px 0px 30px rgba(227,228,237,0.37);
+	border: 2px solid rgba(255, 255, 255, 0.18);
+	border-radius: 20px
+}
+
+.navigation a {
+	text-decoration: none;
+	color: black;
+	padding: 6px 15px;
+	border-radius: 20px;
+	margin: 0 10px;
+	font-weight: 600;
+	transition: all 0.3s ease;
+	text-shadow:
+    -0.5px -0.5px 0 white,
+     0.5px -0.5px 0 white,
+    -0.5px  0.5px 0 white,
+     0.5px  0.5px 0 white;
+}
+
+.navigation a:hover {
+	background: #006400;
+	color: #fff;
+	text-shadow: none;
+}
+
+.navigation a.active {
+	background: #006400;
+	color: #D8D8D8;
+	text-shadow: none;
+}
+
+.parallax {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+#text {
+	position: absolute;
+	font-weight: bold;
+	font-size: 5em;
+	color: #90EE90;
+	text-shadow: 2px 2px 4x rgba(0, 0, 0, 0.2);
+	text-shadow:
+    -1px -1px 0 #000000,
+     1px -1px 0 #000000,
+    -1px  1px 0 #000000,
+     1px  1px 0 #000000;
+}
+
+.parallax img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	pointer-events: none;
+	height: 100vh;
+}
+
+.sec {
+	position: relative;
+	background: #F5E9DA;
+	padding: 100px;
+}
+
+.sec h2 {
+	font-size: 3em;
+	color: black;
+	margin-bottom: 35px;
+}
+
+.sec .para p {
+	font-size: 1.1rem;
+	color: black;
+	font-weight: 300;
+}
+
+/*------*/
+.courses_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 50px auto 0px;
+}
+
+.course_card.show1 {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.course_card.show1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card_header {
+    height: 180px;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+
+.card_header .crown_icon {
+    font-size: 24px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.card_header .title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+
+.card_header .subtitle {
+    font-size: 14px;
+    margin-top: 0;
+}
+
+.ToanC .card_header {
+    background: linear-gradient(135deg, #4c66ff 0%, #0022ff 100%);
+}
+
+.VanC .card_header {
+    background: linear-gradient(135deg, #ffde59 0%, #ffa800 100%);
+}
+
+.AnhC .card_header {
+    background: linear-gradient(135deg, #ff6b8b 0%, #ff477d 100%);
+}
+
+.card_footer {
+    padding: 15px;
+}
+
+.price_info {
+    margin-bottom: 15px;
+}
+
+.old_price {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.current_price {
+    color: #ff0000;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #555;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+}
+
+
+/*------*/
+
+.sec .para {
+	opacity: 0;
+	transition: 600ms ease;
+}
+
+.sec .para.show {
+	opacity: 1;
+}
+
+/*------*/
+
+.aniZ {
+	opacity: 0;
+	transform: translateY(20px);
+	transition: 600ms ease;
+}
+
+.aniZ.show1 {
+	opacity: 1;
+	transform: translateY(0px);
+}
